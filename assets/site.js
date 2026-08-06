@@ -13,6 +13,7 @@
       { href: 'about.html', label: 'About' },
       { href: 'book.html', label: 'Book' },
       { href: 'course.html', label: 'Course' },
+      { href: 'students.html', label: 'Students' },
       { href: 'contact.html', label: 'Contact' },
     ];
 

@@ -12,6 +12,7 @@ Plain static HTML/CSS/JS, no build step — served via GitHub Pages.
 - `about.html` — mission, team, funding
 - `book.html` — Computational Experiments in Radiation Physics
 - `course.html` — Introduction to the Monte Carlo Method
+- `students.html` — student profiles
 - `contact.html` — community links
 - `assets/` — shared stylesheet, script, and images
 
