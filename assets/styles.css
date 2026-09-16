@@ -460,6 +460,18 @@ footer .footer-links {
   flex-wrap: wrap;
 }
 
+footer .footer-counter {
+  margin-top: 0.85rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .footer-counter img {
+  height: 20px;
+  border-radius: 3px;
+}
+
 @media (max-width: 640px) {
   .nav-links {
     flex-wrap: wrap;
