@@ -24,7 +24,7 @@
       }
     });
 
-    if (currentPath.startsWith('project') && !matchedDropdown) {
+    if ((currentPath.startsWith('project') || currentPath === 'internal-dosimetry.html') && !matchedDropdown) {
       const projectsDropdown = nav.querySelector('.nav-dropdown');
       if (projectsDropdown) {
         projectsDropdown.classList.add('active');

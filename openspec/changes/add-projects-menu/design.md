@@ -32,18 +32,24 @@ The user requested adding two tabs under a "Projects" menu:
 - **Rationale**: Standalone URLs allow direct sharing and deep-linking (e.g. for grant proposals, consortium members from Argentina, Chile, Mexico, Peru), while `projects.html` serves as a central showcase.
 
 ### 2. Navigation Bar: Dropdown Menu Component
-- **Decision**: Introduce a `.nav-dropdown` pattern in CSS for the "Projects" item.
+- **Decision**: Introduce a `.nav-dropdown` pattern in CSS for the "Projects" item, containing:
+  - TBI Latin American Network (`project-tbi.html`)
+  - REMPTO — AI in Oncology (`project-rempto.html`)
+  - Internal Dosimetry (`internal-dosimetry.html`)
+  And remove the standalone top-level "Internal Dosimetry" link from the main navbar.
 - **Structure**:
   ```html
   <div class="nav-dropdown">
     <a href="projects.html" class="nav-dropdown-toggle">Projects ▾</a>
     <div class="nav-dropdown-menu">
+      <a href="projects.html">All Projects Overview</a>
       <a href="project-tbi.html">TBI Latin American Network</a>
       <a href="project-rempto.html">REMPTO — AI in Oncology</a>
+      <a href="internal-dosimetry.html">Internal Dosimetry (SAF)</a>
     </div>
   </div>
   ```
-- **Rationale**: Keeps the header compact while clearly revealing the two requested project tabs.
+- **Rationale**: Keeps the header clean and compact while grouping all active MCMEG calculation and research initiatives under Projects.
 
 ### 3. Bilingual Content Presentation for TBI Project
 - **Decision**: Provide the complete Portuguese text as specified by the user, followed by an accurate, high-standard academic English translation. Include clear visual language badges (`PT` / `EN`) or bilingual layout cards.

@@ -19,3 +19,10 @@
 ## 4. Verification & Validation
 
 - [x] 4.1 Verify all internal links, external links, mobile menu transitions, and footer visitor counter across all modified pages.
+
+## 5. Nest Internal Dosimetry inside Projects Menu
+
+- [x] 5.1 Move "Internal Dosimetry" inside the Projects dropdown across all site pages, removing the standalone top-level nav link.
+- [x] 5.2 Add Internal Dosimetry showcase card to `projects.html` alongside TBI Network and REMPTO.
+- [x] 5.3 Update `assets/site.js` to ensure `internal-dosimetry.html` keeps the Projects dropdown active.
+- [x] 5.4 Verify navigation, run local test, commit, and push updates to GitHub repository.
