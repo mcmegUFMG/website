@@ -8,23 +8,28 @@
   const toggle = document.querySelector('.menu-toggle');
 
   if (nav) {
-    const navItems = [
-      { href: 'index.html', label: 'Home' },
-      { href: 'about.html', label: 'About' },
-      { href: 'book.html', label: 'Book' },
-      { href: 'course.html', label: 'Course' },
-      { href: 'students.html', label: 'Students' },
-      { href: 'contact.html', label: 'Contact' },
-    ];
-
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-    nav.innerHTML = navItems
-      .map(({ href, label }) => {
-        const isActive = currentPath === href;
-        const attrs = [`href="${href}"`, isActive ? 'aria-current="page"' : ''].filter(Boolean).join(' ');
-        return `<a ${attrs}>${label}</a>`;
-      })
-      .join('');
+    const allLinks = nav.querySelectorAll('a');
+    let matchedDropdown = false;
+
+    allLinks.forEach((link) => {
+      const href = link.getAttribute('href');
+      if (href && href === currentPath) {
+        link.setAttribute('aria-current', 'page');
+        const dropdown = link.closest('.nav-dropdown');
+        if (dropdown) {
+          dropdown.classList.add('active');
+          matchedDropdown = true;
+        }
+      }
+    });
+
+    if (currentPath.startsWith('project') && !matchedDropdown) {
+      const projectsDropdown = nav.querySelector('.nav-dropdown');
+      if (projectsDropdown) {
+        projectsDropdown.classList.add('active');
+      }
+    }
   }
 
   if (nav && toggle) {
