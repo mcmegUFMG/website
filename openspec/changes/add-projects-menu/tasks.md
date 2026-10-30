@@ -33,3 +33,9 @@
 - [x] 6.2 Add start date (October 2025) to REMPTO project in `project-rempto.html` and `projects.html`.
 - [x] 6.3 Add release date (July 2026) to Internal Dosimetry in `internal-dosimetry.html` and `projects.html`.
 - [x] 6.4 Verify links, commit, and push updates to GitHub.
+
+## 7. REMPTO Website and NIH Ovarian Cancer Data Integration
+
+- [x] 7.1 Include official network site (`rempto.org.br`) and document the first stage data curation (Instituto Mário Penna & NIH ovarian cancer dataset) in `project-rempto.html`.
+- [x] 7.2 Update `projects.html` REMPTO card with `rempto.org.br` link and dataset highlights.
+- [x] 7.3 Verify locally on port 8000 and present preview to user for review before any GitHub push.
