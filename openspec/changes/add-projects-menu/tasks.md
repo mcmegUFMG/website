@@ -26,3 +26,10 @@
 - [x] 5.2 Add Internal Dosimetry showcase card to `projects.html` alongside TBI Network and REMPTO.
 - [x] 5.3 Update `assets/site.js` to ensure `internal-dosimetry.html` keeps the Projects dropdown active.
 - [x] 5.4 Verify navigation, run local test, commit, and push updates to GitHub repository.
+
+## 6. Project Start Dates
+
+- [x] 6.1 Add start date (October 2026) to Pepe Mujica TBI project in `project-tbi.html` and `projects.html`.
+- [x] 6.2 Add start date (October 2025) to REMPTO project in `project-rempto.html` and `projects.html`.
+- [x] 6.3 Add release date (July 2026) to Internal Dosimetry in `internal-dosimetry.html` and `projects.html`.
+- [x] 6.4 Verify links, commit, and push updates to GitHub.
