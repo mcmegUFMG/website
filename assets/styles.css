@@ -426,7 +426,9 @@ header {
   text-decoration: none;
 }
 
-.btn-primary {
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus-visible {
   background: var(--accent);
   color: #1a1608;
 }
