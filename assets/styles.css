@@ -638,6 +638,174 @@ footer .footer-counter img {
   border-radius: 3px;
 }
 
+/* Publications EURADOS-style layout & Year selector */
+.pub-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 1.75rem 0 2.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+.year-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.year-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: rgba(245, 241, 230, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.55rem 1rem;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.year-toggle:hover,
+.year-toggle[aria-expanded='true'] {
+  background: #171410;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.year-toggle-arrow {
+  display: inline-block;
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.year-toggle[aria-expanded='true'] .year-toggle-arrow {
+  transform: rotate(90deg);
+}
+
+.year-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 190px;
+  background: #171410;
+  border: 1px solid rgba(242, 214, 94, 0.25);
+  border-top: 2px solid var(--accent);
+  border-radius: 0 0 10px 10px;
+  padding: 0.45rem 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.75);
+  z-index: 80;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
+
+.year-dropdown-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.year-dropdown-menu a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text) !important;
+  text-decoration: none !important;
+  border-left: 3px solid transparent;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.year-dropdown-menu a:hover,
+.year-dropdown-menu a:focus {
+  background: rgba(242, 214, 94, 0.09);
+  color: var(--accent) !important;
+  border-left-color: var(--accent);
+}
+
+.pub-year-section {
+  margin-bottom: 3rem;
+  scroll-margin-top: 95px;
+}
+
+.pub-year-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 1.25rem;
+  position: relative;
+  padding-bottom: 0.55rem;
+}
+
+.pub-year-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 28px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.pub-year-block {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1.5rem;
+  background: rgba(245, 241, 230, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem 1.75rem;
+  align-items: start;
+}
+
+.pub-year-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  padding-top: 0.1rem;
+}
+
+.pub-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.pub-item {
+  position: relative;
+  padding-left: 1.35rem;
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.pub-item::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  top: -0.05rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
 @media (max-width: 640px) {
   .hero h2 {
     font-size: 2rem;
@@ -652,5 +820,11 @@ footer .footer-counter img {
     width: min(290px, calc(100vw - 1.5rem));
     max-height: calc(100vh - 80px);
     overflow-y: auto;
+  }
+
+  .pub-year-block {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1.25rem;
   }
 }

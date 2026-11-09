@@ -114,4 +114,47 @@
       }
     });
   });
+
+  document.querySelectorAll('.year-selector').forEach((selector) => {
+    const yearToggle = selector.querySelector('.year-toggle');
+    const yearMenu = selector.querySelector('.year-dropdown-menu');
+    if (!yearToggle || !yearMenu) return;
+
+    const closeYearMenu = () => {
+      yearMenu.classList.remove('open');
+      yearToggle.setAttribute('aria-expanded', 'false');
+    };
+
+    yearToggle.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const open = yearMenu.classList.toggle('open');
+      yearToggle.setAttribute('aria-expanded', String(open));
+    });
+
+    yearMenu.querySelectorAll('a[href^="#"]').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        const targetId = link.getAttribute('href').slice(1);
+        const targetEl = document.getElementById(targetId);
+        closeYearMenu();
+        if (targetEl) {
+          event.preventDefault();
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          history.replaceState(null, '', `#${targetId}`);
+        }
+      });
+    });
+
+    document.addEventListener('click', (event) => {
+      if (yearMenu.classList.contains('open') && !selector.contains(event.target)) {
+        closeYearMenu();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && yearMenu.classList.contains('open')) {
+        closeYearMenu();
+        yearToggle.focus();
+      }
+    });
+  });
 })();
