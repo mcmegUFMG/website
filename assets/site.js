@@ -37,9 +37,11 @@
 
       if (dropdownToggle) {
         dropdownToggle.addEventListener('click', (event) => {
-          event.preventDefault();
-          event.stopPropagation();
-          dropdown.classList.toggle('submenu-open');
+          if (event.target.closest('.submenu-arrow')) {
+            event.preventDefault();
+            event.stopPropagation();
+            dropdown.classList.toggle('submenu-open');
+          }
         });
       }
     });

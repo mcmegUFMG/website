@@ -172,11 +172,22 @@ header {
 }
 
 .submenu-arrow {
-  display: inline-block;
-  font-size: 1.15rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin: -4px -6px -4px 4px;
+  border-radius: 6px;
+  font-size: 1.2rem;
   line-height: 1;
   color: var(--muted);
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition: transform 0.2s ease, color 0.2s ease, background 0.15s ease;
+}
+
+.submenu-arrow:hover {
+  background: rgba(242, 214, 94, 0.15);
+  color: var(--accent);
 }
 
 .nav-dropdown-toggle:hover .submenu-arrow,
