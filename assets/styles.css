@@ -612,8 +612,9 @@ section:nth-of-type(odd) {
 }
 
 footer {
+  position: relative;
   text-align: center;
-  padding: 2.5rem 1.5rem;
+  padding: 2.75rem 1.5rem;
   color: var(--muted);
   border-top: 1px solid var(--border);
 }
@@ -627,15 +628,32 @@ footer .footer-links {
 }
 
 footer .footer-counter {
-  margin-top: 0.85rem;
+  margin-top: 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+footer .footer-counter a {
+  display: inline-block;
+  line-height: 0;
+}
+
 footer .footer-counter img {
-  height: 20px;
-  border-radius: 3px;
+  height: auto;
+  max-width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+@media (min-width: 960px) {
+  footer .footer-counter {
+    position: absolute;
+    left: 2.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 0;
+  }
 }
 
 /* Publications EURADOS-style layout & Year selector */
