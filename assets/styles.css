@@ -827,13 +827,15 @@ footer .footer-counter img {
 
 .pub-year-block {
   display: grid;
-  grid-template-columns: 180px 1fr;
+  grid-template-columns: 180px minmax(0, 1fr);
   gap: 1.5rem;
   background: rgba(245, 241, 230, 0.04);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 1.5rem 1.75rem;
   align-items: start;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .pub-year-label {
@@ -850,6 +852,8 @@ footer .footer-counter img {
   display: flex;
   flex-direction: column;
   gap: 1.15rem;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .pub-item {
@@ -858,6 +862,15 @@ footer .footer-counter img {
   font-size: 0.96rem;
   line-height: 1.65;
   color: var(--text);
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.pub-item a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .pub-item::before {
@@ -870,6 +883,14 @@ footer .footer-counter img {
   color: var(--accent);
 }
 
+@media (max-width: 768px) {
+  .pub-year-block {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.75rem;
+    padding: 1.15rem 1.25rem;
+  }
+}
+
 @media (max-width: 640px) {
   .hero h2 {
     font-size: 2rem;
@@ -880,11 +901,5 @@ footer .footer-counter img {
     width: min(290px, calc(100vw - 1.5rem));
     max-height: calc(100vh - 80px);
     overflow-y: auto;
-  }
-
-  .pub-year-block {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-    padding: 1.25rem;
   }
 }
