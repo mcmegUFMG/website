@@ -85,10 +85,65 @@
         </div>
       </section>
 
-      <aside class="floating-banner" aria-label="Announcements">
-        <p>
-          News: <a href="project-intercomparison.html">3rd Intercomparison Exercise MCMEG</a> | Free online course: <a href="course.html">Introduction to the Monte Carlo Method</a>
-        </p>
+      <aside class="news-carousel" aria-label="MCMEG News and Announcements" aria-roledescription="carousel">
+        <button class="news-arrow news-arrow-prev" type="button" aria-label="Previous news item">‹</button>
+
+        <div class="news-slides" aria-live="polite">
+          <article class="news-slide active" data-slide="0">
+            <span class="news-tag">📢 Open Call · Deadline: 15 Dec 2026</span>
+            <h3 class="news-title">3rd Intercomparison Exercise of MCMEG (2026)</h3>
+            <p class="news-desc">
+              Collaborative Monte Carlo modelling benchmark of a clinical diagnostic X-ray system (VMI Pulsar 800 Plus) at CDTN/CNEN.
+            </p>
+            <a class="news-link" href="project-intercomparison.html">View exercise details &amp; PDF →</a>
+          </article>
+
+          <article class="news-slide" data-slide="1">
+            <span class="news-tag">🌐 Approved Project · MCTI/CNPq Call Nº 02/2026</span>
+            <h3 class="news-title">TBI Latin American Network Approved in CNPq "Pepe Mujica" Call</h3>
+            <p class="news-desc">
+              Multinational research network (Argentina, Brazil, Chile, Mexico, and Peru) for Monte Carlo dosimetry, AI, and 3D phantoms in Total Body Irradiation (TBI).
+            </p>
+            <a class="news-link" href="project-tbi.html">Explore the TBI Network project →</a>
+          </article>
+
+          <article class="news-slide" data-slide="2">
+            <span class="news-tag">📰 Press Feature · Instituto Mário Penna &amp; MCMEG</span>
+            <h3 class="news-title">Scientific Advance: AI &amp; Personalized Medicine in Ovarian Cancer</h3>
+            <p class="news-desc">
+              Featured article highlighting our partnership applying deep learning and digital pathology to predict molecular profiles in ovarian cancer.
+            </p>
+            <a class="news-link" href="project-rempto.html">Read more on the REMPTO page →</a>
+          </article>
+
+          <article class="news-slide" data-slide="3">
+            <span class="news-tag">🗄️ Open Science Repository</span>
+            <h3 class="news-title">Internal Dosimetry — Specific Absorbed Fractions (SAF) Database</h3>
+            <p class="news-desc">
+              Open computational repository and interactive web tool for Specific Absorbed Fractions generated via Monte Carlo simulations at UFMG.
+            </p>
+            <a class="news-link" href="internal-dosimetry.html">Explore SAF Database →</a>
+          </article>
+
+          <article class="news-slide" data-slide="4">
+            <span class="news-tag">🎓 Free Online Course</span>
+            <h3 class="news-title">Introduction to the Monte Carlo Method</h3>
+            <p class="news-desc">
+              Open educational course covering fundamentals and practical applications of Monte Carlo radiation transport in nuclear sciences.
+            </p>
+            <a class="news-link" href="course.html">Start learning →</a>
+          </article>
+        </div>
+
+        <button class="news-arrow news-arrow-next" type="button" aria-label="Next news item">›</button>
+
+        <div class="news-dots" role="tablist" aria-label="Choose news item">
+          <button class="news-dot active" type="button" role="tab" aria-selected="true" aria-label="News 1: 3rd Intercomparison Exercise" data-slide-to="0"></button>
+          <button class="news-dot" type="button" role="tab" aria-selected="false" aria-label="News 2: TBI Network Approved in CNPq Call" data-slide-to="1"></button>
+          <button class="news-dot" type="button" role="tab" aria-selected="false" aria-label="News 3: AI & Ovarian Cancer Press Feature" data-slide-to="2"></button>
+          <button class="news-dot" type="button" role="tab" aria-selected="false" aria-label="News 4: Internal Dosimetry SAF Database" data-slide-to="3"></button>
+          <button class="news-dot" type="button" role="tab" aria-selected="false" aria-label="News 5: Monte Carlo Online Course" data-slide-to="4"></button>
+        </div>
       </aside>
 
       <section id="explore" class="content-placeholder">
