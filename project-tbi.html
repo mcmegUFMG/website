@@ -75,38 +75,75 @@
         </div>
 
         <div class="grid" style="margin-top:2rem;">
-          <article class="card">
-            <h4><span class="lang-badge">PT</span> Resumo do Projeto</h4>
-            <p>
-              A Irradiação Corporal Total (TBI — <em>Total Body Irradiation</em>) é uma modalidade terapêutica essencial no condicionamento pré-transplante de medula óssea e no tratamento de doenças hematológicas malignas, exigindo elevada precisão dosimétrica, rigoroso controle radiobiológico e protocolos clínicos padronizados para garantir eficácia terapêutica e segurança ao paciente.
-            </p>
-            <p>
-              Apesar de sua importância clínica, a implementação da TBI na América Latina ainda apresenta heterogeneidade metodológica, limitações tecnológicas e carência de infraestrutura cooperativa regional. Este projeto propõe a criação de uma rede colaborativa latino-americana entre instituições da Argentina, Brasil, Chile, México e Peru para desenvolver uma plataforma integrada de pesquisa, inovação tecnológica e formação de recursos humanos voltada à modelagem computacional avançada, dosimetria experimental e validação clínica de protocolos de TBI.
-            </p>
-            <p>
-              A proposta integra simulações Monte Carlo para cálculo de dose, inteligência artificial para predição rápida de parâmetros dosimétricos, sistemas experimentais utilizando TLDs, nanoDots OSL, filmes EBT4, Fricke gel e desenvolvimento de sistemas ópticos baseados em LED para leitura dosimétrica de alta sensibilidade. Também inclui impressão 3D para produção de fantomas antropomórficos personalizados destinados à validação multicêntrica e intercomparação regional.
-            </p>
-            <p>
-              O projeto visa harmonizar protocolos regionais, reduzir incertezas dosimétricas, fortalecer infraestrutura científica compartilhada, promover mobilidade acadêmica internacional e formar especialistas em física médica, dosimetria avançada e inteligência artificial aplicada à radioterapia. Os impactos esperados incluem maior segurança clínica, padronização metodológica, fortalecimento científico regional e posicionamento estratégico da América Latina como referência emergente em pesquisa translacional e inovação tecnológica em radioterapia de alta complexidade.
-            </p>
-          </article>
+          <article class="card" id="tbi-abstract-card" style="grid-column: 1 / -1;">
+            <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.75rem; margin-bottom:1rem;">
+              <h4 id="tbi-abstract-heading" style="margin:0;"><span class="lang-badge">EN</span> Project Abstract</h4>
+              <button
+                type="button"
+                id="tbi-lang-toggle"
+                aria-label="Toggle language between English and Portuguese"
+                style="background:rgba(242, 214, 94, 0.12); color:var(--accent); border:1px solid rgba(242, 214, 94, 0.45); border-radius:999px; padding:0.4rem 0.95rem; font-size:0.88rem; font-weight:600; cursor:pointer; transition:background 0.2s ease, color 0.2s ease;"
+              >
+                🌐 Ver em Português (PT)
+              </button>
+            </div>
 
-          <article class="card">
-            <h4><span class="lang-badge">EN</span> Project Abstract</h4>
-            <p>
-              Total Body Irradiation (TBI) is an essential therapeutic modality in conditioning regimens prior to bone marrow transplantation and in the management of hematological malignancies. It demands high dosimetric precision, rigorous radiobiological control, and standardized clinical protocols to ensure therapeutic efficacy and patient safety.
-            </p>
-            <p>
-              Despite its clinical importance, the implementation of TBI across Latin America still faces methodological heterogeneity, technological constraints, and a shortage of regional cooperative infrastructure. This project proposes establishing a Latin American collaborative network among institutions from Argentina, Brazil, Chile, Mexico, and Peru to develop an integrated platform for scientific research, technological innovation, and human resource training focused on advanced computational modeling, experimental dosimetry, and clinical validation of TBI protocols.
-            </p>
-            <p>
-              The proposal integrates Monte Carlo simulations for dose calculation, artificial intelligence for rapid prediction of dosimetric parameters, experimental systems employing TLDs, OSL nanoDots, EBT4 radiochromic films, Fricke gel, and the development of LED-based optical systems for high-sensitivity dosimetric readout. It also encompasses 3D printing for the production of customized anthropomorphic phantoms designed for multicenter validation and regional intercomparison.
-            </p>
-            <p>
-              The project aims to harmonize regional protocols, minimize dosimetric uncertainties, strengthen shared scientific infrastructure, foster international academic mobility, and train specialists in medical physics, advanced dosimetry, and artificial intelligence applied to radiotherapy. Expected impacts include enhanced clinical safety, methodological standardization, regional scientific empowerment, and strategic positioning of Latin America as an emerging benchmark in translational research and technological innovation for high-complexity radiotherapy.
-            </p>
+            <div id="tbi-content-en">
+              <p>
+                Total Body Irradiation (TBI) is an essential therapeutic modality in conditioning regimens prior to bone marrow transplantation and in the management of hematological malignancies. It demands high dosimetric precision, rigorous radiobiological control, and standardized clinical protocols to ensure therapeutic efficacy and patient safety.
+              </p>
+              <p>
+                Despite its clinical importance, the implementation of TBI across Latin America still faces methodological heterogeneity, technological constraints, and a shortage of regional cooperative infrastructure. This project proposes establishing a Latin American collaborative network among institutions from Argentina, Brazil, Chile, Mexico, and Peru to develop an integrated platform for scientific research, technological innovation, and human resource training focused on advanced computational modeling, experimental dosimetry, and clinical validation of TBI protocols.
+              </p>
+              <p>
+                The proposal integrates Monte Carlo simulations for dose calculation, artificial intelligence for rapid prediction of dosimetric parameters, experimental systems employing TLDs, OSL nanoDots, EBT4 radiochromic films, Fricke gel, and the development of LED-based optical systems for high-sensitivity dosimetric readout. It also encompasses 3D printing for the production of customized anthropomorphic phantoms designed for multicenter validation and regional intercomparison.
+              </p>
+              <p style="margin-bottom:0;">
+                The project aims to harmonize regional protocols, minimize dosimetric uncertainties, strengthen shared scientific infrastructure, foster international academic mobility, and train specialists in medical physics, advanced dosimetry, and artificial intelligence applied to radiotherapy. Expected impacts include enhanced clinical safety, methodological standardization, regional scientific empowerment, and strategic positioning of Latin America as an emerging benchmark in translational research and technological innovation for high-complexity radiotherapy.
+              </p>
+            </div>
+
+            <div id="tbi-content-pt" style="display:none;">
+              <p>
+                A Irradiação Corporal Total (TBI — <em>Total Body Irradiation</em>) é uma modalidade terapêutica essencial no condicionamento pré-transplante de medula óssea e no tratamento de doenças hematológicas malignas, exigindo elevada precisão dosimétrica, rigoroso controle radiobiológico e protocolos clínicos padronizados para garantir eficácia terapêutica e segurança ao paciente.
+              </p>
+              <p>
+                Apesar de sua importância clínica, a implementação da TBI na América Latina ainda apresenta heterogeneidade metodológica, limitações tecnológicas e carência de infraestrutura cooperativa regional. Este projeto propõe a criação de uma rede colaborativa latino-americana entre instituições da Argentina, Brasil, Chile, México e Peru para desenvolver uma plataforma integrada de pesquisa, inovação tecnológica e formação de recursos humanos voltada à modelagem computacional avançada, dosimetria experimental e validação clínica de protocolos de TBI.
+              </p>
+              <p>
+                A proposta integra simulações Monte Carlo para cálculo de dose, inteligência artificial para predição rápida de parâmetros dosimétricos, sistemas experimentais utilizando TLDs, nanoDots OSL, filmes EBT4, Fricke gel e desenvolvimento de sistemas ópticos baseados em LED para leitura dosimétrica de alta sensibilidade. Também inclui impressão 3D para produção de fantomas antropomórficos personalizados destinados à validação multicêntrica e intercomparação regional.
+              </p>
+              <p style="margin-bottom:0;">
+                O projeto visa harmonizar protocolos regionais, reduzir incertezas dosimétricas, fortalecer infraestrutura científica compartilhada, promover mobilidade acadêmica internacional e formar especialistas em física médica, dosimetria avançada e inteligência artificial aplicada à radioterapia. Os impactos esperados incluem maior segurança clínica, padronização metodológica, fortalecimento científico regional e posicionamento estratégico da América Latina como referência emergente em pesquisa translacional e inovação tecnológica em radioterapia de alta complexidade.
+              </p>
+            </div>
           </article>
         </div>
+        <script>
+          (function () {
+            const btn = document.getElementById('tbi-lang-toggle');
+            const enBox = document.getElementById('tbi-content-en');
+            const ptBox = document.getElementById('tbi-content-pt');
+            const heading = document.getElementById('tbi-abstract-heading');
+            if (!btn || !enBox || !ptBox || !heading) return;
+            let currentLang = 'en';
+            btn.addEventListener('click', function () {
+              if (currentLang === 'en') {
+                currentLang = 'pt';
+                enBox.style.display = 'none';
+                ptBox.style.display = 'block';
+                heading.innerHTML = '<span class="lang-badge">PT</span> Resumo do Projeto';
+                btn.textContent = '🌐 View in English (EN)';
+              } else {
+                currentLang = 'en';
+                ptBox.style.display = 'none';
+                enBox.style.display = 'block';
+                heading.innerHTML = '<span class="lang-badge">EN</span> Project Abstract';
+                btn.textContent = '🌐 Ver em Português (PT)';
+              }
+            });
+          })();
+        </script>
 
         <div style="margin-top:2.5rem;">
           <h3>Principais Pilares Tecnológicos & Metodológicos</h3>
