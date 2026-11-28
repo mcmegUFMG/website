@@ -342,8 +342,14 @@ header::before {
   padding: 4rem 1.5rem 3rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: 2.5rem;
   align-items: center;
+}
+
+@media (min-width: 900px) {
+  .hero {
+    grid-template-columns: 1.6fr 0.85fr;
+  }
 }
 
 .hero-logo {
@@ -548,7 +554,7 @@ header::before {
 
 .hero p {
   color: var(--text);
-  max-width: 760px;
+  max-width: 100%;
 }
 
 .hero .cta-group {
