@@ -91,40 +91,6 @@
         </div>
 
         <div class="grid" style="margin-top:2rem;">
-          <article class="card">
-            <h4><span class="lang-badge">PT</span> Sobre o Projeto</h4>
-            <p>
-              Este projeto desenvolve modelos de inteligência artificial e aprendizado profundo para análise e classificação de dados em oncologia, utilizando redes neurais convolucionais e técnicas modernas de machine learning.
-            </p>
-            <p>
-              A pesquisa busca explorar o potencial da IA para identificar padrões relevantes em dados relacionados ao câncer e contribuir para o desenvolvimento de novas ferramentas computacionais aplicadas à pesquisa oncológica.
-            </p>
-            <p>
-              O projeto é desenvolvido em colaboração entre o <strong>Instituto Mário Penna</strong>, Belo Horizonte/MG, e o <strong>MCMEG/UFMG</strong>, reunindo conhecimentos de computação, inteligência artificial e ciências da saúde. A iniciativa também contribui para o desenvolvimento de metodologias reprodutíveis e escaláveis para aplicações futuras em diferentes contextos da oncologia.
-            </p>
-            <h5 style="margin-top:1.25rem; font-size:1rem; color:var(--text);">Primeira Etapa: Organização e Curadoria de Dados</h5>
-            <p>
-              A primeira etapa do projeto consistiu na estruturação, organização e curadoria de dados histopatológicos disponibilizados pelo <strong>Instituto de Pesquisa Mário Penna</strong> integrados aos dados públicos do <strong>National Institutes of Health (NIH)</strong> contendo informações e lâminas sobre <strong>câncer de ovário</strong>. Essa base consolidada viabilizou o treinamento, benchmark e validação de modelos convolucionais com transparência e reprodutibilidade científica.
-            </p>
-          </article>
-
-          <article class="card">
-            <h4><span class="lang-badge">EN</span> About the Project</h4>
-            <p>
-              This project develops artificial intelligence and deep learning models for oncological data analysis and classification, employing convolutional neural networks and state-of-the-art machine learning techniques.
-            </p>
-            <p>
-              The research explores the potential of AI to identify clinically relevant patterns in cancer-related data, contributing to the development of novel computational tools tailored for oncological research and clinical decision support.
-            </p>
-            <p>
-              Developed as a collaborative initiative between <strong>Instituto Mário Penna</strong> (Belo Horizonte/MG) and <strong>MCMEG/UFMG</strong>, the project integrates expertise across computer science, artificial intelligence, and health sciences. The initiative also fosters reproducible and scalable methodologies for future applications across varied oncological contexts.
-            </p>
-            <h5 style="margin-top:1.25rem; font-size:1rem; color:var(--text);">First Stage: Data Curation & Public Repositories</h5>
-            <p>
-              The initial phase of the project focused on the organization, curation, and standardization of histopathological and clinical datasets from the <strong>Instituto Mário Penna Research Center</strong> combined with public data from the <strong>National Institutes of Health (NIH)</strong> on <strong>ovarian cancer</strong>. This curated database provides a solid foundation for training, benchmarking, and validating deep learning models under open-science principles.
-            </p>
-          </article>
-
           <article class="card" style="grid-column: 1 / -1; background: var(--bg-accent, #1a1611); border-left: 4px solid var(--accent, #f2d65e);">
             <div style="margin-bottom:0.65rem;">
               <span class="lang-badge" style="background:#a83232;">Matéria / Press Feature</span>
@@ -140,7 +106,78 @@
               </a>
             </div>
           </article>
+
+          <article class="card" id="rempto-about-card" style="grid-column: 1 / -1;">
+            <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.75rem; margin-bottom:1rem;">
+              <h4 id="rempto-about-heading" style="margin:0;"><span class="lang-badge">EN</span> About the Project</h4>
+              <button
+                type="button"
+                id="rempto-lang-toggle"
+                aria-label="Toggle language between English and Portuguese"
+                style="background:rgba(242, 214, 94, 0.12); color:var(--accent); border:1px solid rgba(242, 214, 94, 0.45); border-radius:999px; padding:0.4rem 0.95rem; font-size:0.88rem; font-weight:600; cursor:pointer; transition:background 0.2s ease, color 0.2s ease;"
+              >
+                🌐 Ver em Português (PT)
+              </button>
+            </div>
+
+            <div id="rempto-content-en">
+              <p>
+                This project develops artificial intelligence and deep learning models for oncological data analysis and classification, employing convolutional neural networks and state-of-the-art machine learning techniques.
+              </p>
+              <p>
+                The research explores the potential of AI to identify clinically relevant patterns in cancer-related data, contributing to the development of novel computational tools tailored for oncological research and clinical decision support.
+              </p>
+              <p>
+                Developed as a collaborative initiative between <strong>Instituto Mário Penna</strong> (Belo Horizonte/MG) and <strong>MCMEG/UFMG</strong>, the project integrates expertise across computer science, artificial intelligence, and health sciences. The initiative also fosters reproducible and scalable methodologies for future applications across varied oncological contexts.
+              </p>
+              <h5 style="margin-top:1.25rem; font-size:1rem; color:var(--text);">First Stage: Data Curation &amp; Public Repositories</h5>
+              <p style="margin-bottom:0;">
+                The initial phase of the project focused on the organization, curation, and standardization of histopathological and clinical datasets from the <strong>Instituto Mário Penna Research Center</strong> combined with public data from the <strong>National Institutes of Health (NIH)</strong> on <strong>ovarian cancer</strong>. This curated database provides a solid foundation for training, benchmarking, and validating deep learning models under open-science principles.
+              </p>
+            </div>
+
+            <div id="rempto-content-pt" style="display:none;">
+              <p>
+                Este projeto desenvolve modelos de inteligência artificial e aprendizado profundo para análise e classificação de dados em oncologia, utilizando redes neurais convolucionais e técnicas modernas de machine learning.
+              </p>
+              <p>
+                A pesquisa busca explorar o potencial da IA para identificar padrões relevantes em dados relacionados ao câncer e contribuir para o desenvolvimento de novas ferramentas computacionais aplicadas à pesquisa oncológica.
+              </p>
+              <p>
+                O projeto é desenvolvido em colaboração entre o <strong>Instituto Mário Penna</strong>, Belo Horizonte/MG, e o <strong>MCMEG/UFMG</strong>, reunindo conhecimentos de computação, inteligência artificial e ciências da saúde. A iniciativa também contribui para o desenvolvimento de metodologias reprodutíveis e escaláveis para aplicações futuras em diferentes contextos da oncologia.
+              </p>
+              <h5 style="margin-top:1.25rem; font-size:1rem; color:var(--text);">Primeira Etapa: Organização e Curadoria de Dados</h5>
+              <p style="margin-bottom:0;">
+                A primeira etapa do projeto consistiu na estruturação, organização e curadoria de dados histopatológicos disponibilizados pelo <strong>Instituto de Pesquisa Mário Penna</strong> integrados aos dados públicos do <strong>National Institutes of Health (NIH)</strong> contendo informações e lâminas sobre <strong>câncer de ovário</strong>. Essa base consolidada viabilizou o treinamento, benchmark e validação de modelos convolucionais com transparência e reprodutibilidade científica.
+              </p>
+            </div>
+          </article>
         </div>
+        <script>
+          (function () {
+            const btn = document.getElementById('rempto-lang-toggle');
+            const enBox = document.getElementById('rempto-content-en');
+            const ptBox = document.getElementById('rempto-content-pt');
+            const heading = document.getElementById('rempto-about-heading');
+            if (!btn || !enBox || !ptBox || !heading) return;
+            let currentLang = 'en';
+            btn.addEventListener('click', function () {
+              if (currentLang === 'en') {
+                currentLang = 'pt';
+                enBox.style.display = 'none';
+                ptBox.style.display = 'block';
+                heading.innerHTML = '<span class="lang-badge">PT</span> Sobre o Projeto';
+                btn.textContent = '🌐 View in English (EN)';
+              } else {
+                currentLang = 'en';
+                ptBox.style.display = 'none';
+                enBox.style.display = 'block';
+                heading.innerHTML = '<span class="lang-badge">EN</span> About the Project';
+                btn.textContent = '🌐 Ver em Português (PT)';
+              }
+            });
+          })();
+        </script>
       </section>
     </main>
     <footer>
